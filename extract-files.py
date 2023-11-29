@@ -17,6 +17,8 @@ from extract_utils.main import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so'),
     'vendor/etc/init/init.batterysecret.rc': blob_fixup()
         .regex_replace('.*seclabel u:r:batterysecret:s0\n', ''),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
