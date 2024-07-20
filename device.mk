@@ -62,5 +62,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     TargetWifiOverlay
 
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink
+
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/pipa/pipa-vendor.mk)
