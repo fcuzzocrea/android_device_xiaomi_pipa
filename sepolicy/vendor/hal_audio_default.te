@@ -1,0 +1,2 @@
+# For interfacing with Dolbyhal
+hal_client_domain(hal_audio_default, hal_dms)
