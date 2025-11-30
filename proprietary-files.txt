@@ -1,4 +1,4 @@
-# Unpinned blobs from pipa_global-user 13 RKQ1.211001.001 V816.0.9.0.UMZMIXM release-keys
+# Unpinned blobs from pipa_global-user RKQ1.211001.001 OS2.0.9.0.UMZMIXM user release-keys
 
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb:vendor/etc/acdbdata/Tutu/Tutu_Bluetooth_cal.acdb
@@ -141,6 +141,7 @@ vendor/lib64/libmialgo_sd.so
 vendor/lib64/libmialgo_utils.so
 vendor/lib64/libmialgoengine.so
 vendor/lib64/libmibokeh_855.so
+vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmpbase.so
