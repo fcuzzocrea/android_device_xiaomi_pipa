@@ -28,7 +28,6 @@ import com.android.settingslib.widget.MainSwitchPreference;
 public class StylusSettingsFragment extends PreferenceFragment implements
         SharedPreferences.OnSharedPreferenceChangeListener {
     private static final String TAG = "XiaomiPeripheralManagerPenUtils";
-    private static final String STYLUS_MODE_KEY = "stylus_mode_key";
     private static final String FORCE_RECOGNIZE_STYLUS_KEY =
       "force_recognize_stylus_key";
 
@@ -42,11 +41,6 @@ public class StylusSettingsFragment extends PreferenceFragment implements
     Context context = getContext();
     mStylusPreference = PreferenceManager.getDefaultSharedPreferences(context);
     mRefreshUtils = new RefreshUtils(context);
-
-    MainSwitchPreference stylusModePref =
-        (MainSwitchPreference)findPreference("stylus_mode_key");
-    stylusModePref.setChecked(
-        mStylusPreference.getBoolean("stylus_mode_key", false));
 
     SwitchPreferenceCompat forceRecognizePref =
         (SwitchPreferenceCompat)findPreference("force_recognize_stylus_key");
@@ -69,9 +63,7 @@ public class StylusSettingsFragment extends PreferenceFragment implements
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
                                           String key) {
-        if (STYLUS_MODE_KEY.equals(key)) {
-          setStylusMode(sharedPreferences.getBoolean(key, false));
-        } else if (FORCE_RECOGNIZE_STYLUS_KEY.equals(key)) {
+        if (FORCE_RECOGNIZE_STYLUS_KEY.equals(key)) {
           setForceRecognizeStylus(sharedPreferences.getBoolean(key, false));
         }
     }
